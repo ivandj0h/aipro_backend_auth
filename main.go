@@ -41,10 +41,10 @@ func main() {
 
 	micro.Get("/users/me", middleware.DeserializeUser, controllers.GetMe)
 
-	micro.Get("/healthchecker", func(c *fiber.Ctx) error {
+	micro.Get("/healthcheck", func(c *fiber.Ctx) error {
 		return c.Status(fiber.StatusOK).JSON(fiber.Map{
 			"status":  "success",
-			"message": "Welcome to Golang, Fiber, and GORM",
+			"message": "Welcome to AI PRO Management System Backend API",
 		})
 	})
 
